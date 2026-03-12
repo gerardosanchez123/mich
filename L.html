@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi amor ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff6b9a,#ffb6c1);
+font-family:sans-serif;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+.card{
+background:rgba(0,0,0,0.4);
+padding:40px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+p{
+font-size:20px;
+}
+
+img{
+width:300px;
+margin-top:20px;
+}
+
+.corazon{
+position:absolute;
+font-size:25px;
+animation:flotar linear infinite;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(100vh);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+to{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Para ti ❤️</h1>
+
+<p>Eres la persona más especial para mí</p>
+<p>Esta rosa es para ti 🌹</p>
+
+<img src="/static/rosa.png">
+
+<p>Te quiero mucho 💖</p>
+
+</div>
+
+<script>
+
+function crearCorazon(){
+
+let c=document.createElement("div");
+c.className="corazon";
+c.innerHTML="❤️";
+
+c.style.left=Math.random()*100+"vw";
+c.style.animationDuration=(3+Math.random()*5)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),8000);
+
+}
+
+setInterval(crearCorazon,300);
+
+</script>
+
+</body>
+</html>
